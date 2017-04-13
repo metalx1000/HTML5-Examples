@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Video!!!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bowlby+One+SC" />
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+          
+
+  <style>
+    body, html, .videoContainer{
+      margin: 0;
+      padding: 0;
+    }
+
+    .videoContainer {
+      position: fixed;
+      top: 0px;
+      height:100%;
+      width: 100%;
+      z-index: -100;
+    }
+ 
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      overflow: hidden;
+      z-index: -100;
+    }
+
+    .overlay{
+      position: absolute;
+      top: 40%;
+      left: 0;
+      width: 100%;
+      color: white;
+      font-family: "Bowlby One SC";
+    }
+
+    .info {
+      position: relative;
+      top:10px;
+      left:10px;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+      $('.modal').modal();
+    });
+  </script>
+</head>
+<body>
+  <!-- Modal Trigger -->
+  <a class="info waves-effect waves-light btn" href="#modal1">Information</a>
+
+  <!--Text overlay-->
+      <div class="overlay text-center">
+        <h1>Hello World!</h1>
+      </div>
+  
+  <!--Video-->
+  <div class="videoContainer">
+    <video autoplay="true" loop>
+      <source src="../video.mp4" type="video/mp4">
+      <source src="../video.webm" type="video/webm">
+    </video>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Information</h4>
+      <p>This is an example of a Fullscreen Video in HTML created by Kris Occhipinti of <a href="https://filmsbykris.com">Films By Kris</a></p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+</body>
+</html>
+
