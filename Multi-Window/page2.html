@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        var msg = $(this).attr('msg');
+        localStorage.setItem("test",msg);
+        var v = localStorage.getItem("test");
+      });
+    });
+  </script>
+</head>
+<body>
+
+<div id="main" class="container">
+ <button id="button" type="button" class="btn btn-primary btn-block" msg="This is message 1">Button</button>
+ <button id="button" type="button" class="btn btn-primary btn-block" msg="This is the second message">Button</button>
+ <button id="button" type="button" class="btn btn-primary btn-block" msg="Message 3 has been chosen">Button</button>
+ <button id="button" type="button" class="btn btn-primary btn-block" msg="Button 4 Has been clicked">Button</button>
+  
+<h2>Striped Rows</h2>
+<p>The .table-striped class adds zebra-stripes to a table:</p>            
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>john@example.com</td>
+    </tr>
+    <tr>
+      <td>Mary</td>
+      <td>Moe</td>
+      <td>mary@example.com</td>
+    </tr>
+    <tr>
+      <td>July</td>
+      <td>Dooley</td>
+      <td>july@example.com</td>
+    </tr>
+  </tbody>
+</table>
+  
+</div>
+
+</body>
+</html>
+
